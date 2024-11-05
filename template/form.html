@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    {% load static %}
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("https://hartronambala.com/admin/uploads/1723010656_centre.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .div1 {
+            text-align: center;
+            background-color: rgba(196, 255, 250, 0.5); 
+            backdrop-filter: blur(10px);
+            border-radius: 20px; 
+            padding: 20px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+        }
+    </style> 
+    <script>
+            alert("WELCOME. ENTER YOUR FEEDBACK")
+    </script>
+</head>
+<body>
+    <div class="div1">
+        <form method="POST" class="form" id="feedbackForm">
+            {% csrf_token %}
+            <h2>Feedback Form</h2>
+            {{ form.as_p }}
+            <button>submit</button>
+        </form>
+    </div>
+</body>
+</html>
